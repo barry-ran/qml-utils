@@ -59,14 +59,10 @@ Item {
         console.log(json);
 
         var objectArray = parseJSONString(json, query);
-        var i = 0;
         for ( var key in objectArray ) {
             var jo = objectArray[key];
             console.log(jo);
-            jsonModel.append( jo );
-            console.log(count);
-            console.log(jsonModel.get(i).resolved_title)
-            i++;
+            jsonModel.append(jo);
         }
         loading = false;
         listModelUpdate = !listModelUpdate;
